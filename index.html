@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>安徽监狱系统优秀原创博文评比</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <script type="text/javascript" src="http://n.sinaimg.cn/ah/js/jquery1.9.0.js"></script>
+    <script type="text/javascript" src="http://n.sinaimg.cn/ah/js/masonry-docs.min.js"></script>
+    <script src="http://ahfensitong.com/normalApi/sinaApi.js"></script>
+  </head>
+
+
+  
+  <script>
+    // var sina = new SinaApi();
+    window.uid="klooogdfgsdf";
+  </script>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script type="text/javascript">
+    fixHeight();
+    function fixHeight() {
+
+      var _oh = window.innerHeight / 1136;
+      var _oW = window.innerWidth / 640;//获取屏幕尺寸相对于设计稿尺寸比例
+      var r = _oW > _oh ? _oh : _oW;
+      if (r > 1) {
+        $('html').css('font-size', '100px');
+      }
+      else {
+        $('html').css('font-size', 100 * _oW + 'px');
+      }
+      var r = document.body.offsetWidth / 640;
+
+      
+    }
+  </script>
+  <!-- 微信自定义分享开始 -->
+  
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script type="text/javascript">
+    document.write('<script src="http:\/\/common.ah.sina.com.cn\/wechat\/wechatjs.php?url=' + window.location.href.split('#')[0].replace(/&/g, '%26') + '"><\/script>');
+    console.log(window.location);
+    //if(  window.location.search.substr(1).length > 20 ){
+    //window.location.href = 'http://ah.sina.com.cn/483/2016/0728/178.html';
+    //}
+
+    wx.ready(function () {
+
+      // 分享到朋友圈
+      wx.onMenuShareTimeline({
+        title: "安徽监狱系统优秀原创博文评比", // 分享标题
+        link: "http://ahfensitong.com/tmp/sifating/index.html", // 分享链接
+        imgUrl: "http://n.sinaimg.cn/ah/865fe30d/20171109/HuoDongJieShao.jpg", // 分享图标
+        success: function () {
+          // 用户确认分享后执行的回调函数
+          // alert('分享成功');
+        },
+        cancel: function () {
+          // 用户取消分享后执行的回调函数
+          // alert('分享取消');
+        }
+      });
+
+      // 分享给朋友
+      wx.onMenuShareAppMessage({
+        title: "安徽监狱系统优秀原创博文评比", // 分享标题
+        desc: "#高墙内那些鲜味人知的故事#安徽监狱系统优秀原创博文评比活动正式开始了，快来为你喜欢的作品打call", // 分享描述
+        link: "http://ahfensitong.com/tmp/sifating/index.html", // 分享链接
+        imgUrl: "http://n.sinaimg.cn/ah/865fe30d/20171109/HuoDongJieShao.jpg", // 分享图标
+        type: 'link', // 分享类型,music、video或link，不填默认为link
+        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+        success: function () {
+          // 用户确认分享后执行的回调函数
+          // alert('分享朋友成功');
+        },
+        cancel: function () {
+          // 用户取消分享后执行的回调函数
+          // alert('取消分享朋友');
+        }
+      });
+
+    });
+
+    wx.error(function (res) {
+      //alert(res.errMsg);
+    });
+  </script>
+
+</html>
